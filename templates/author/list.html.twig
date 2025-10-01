@@ -16,11 +16,11 @@
         <img src="{{ author.picture }}" alt="{{ author.username }}" height="200px" width="200px">
         <p><b>Username : </b> {{ author.username }} </p>
         <p><b>Email : </b> {{ author.email }} </p>
-        <p><b>Number of Books : </b> {{ author.nb_books }} </p>
+        <p><b>Number of Books : </b> {{ author.nbBooks }} </p>
         <a href="{{path('app_author_details',{id: author.id})}}">Details</a>
         <hr>
         </div>
-        {% set somme_livres = somme_livres + author.nb_books %}
+        {% set somme_livres = somme_livres + author.nbBooks %}
     {% endfor %}
     <div>
     <p><b>Number of Authors : </b> {{ authors | length }} </p>
